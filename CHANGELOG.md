@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Reworded the mod description and credits for MultiTome. No gameplay changes.
+
 ## 0.1.0
 
 - First release. Tomes picked up by any player are shared with the whole team and saved to each player's run record, so they come back when a player disconnects and rejoins.
