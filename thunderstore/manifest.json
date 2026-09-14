@@ -1,0 +1,9 @@
+{
+    "name": "PersistentMultiTome",
+    "version_number": "0.1.0",
+    "website_url": "https://github.com/darkharasho/stonewards-persistent-multitome",
+    "description": "Tomes picked up by any dwarf are shared with the whole team, and you keep them when you disconnect and rejoin. Late joiners get every tome shared so far. Host only.",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2305"
+    ]
+}

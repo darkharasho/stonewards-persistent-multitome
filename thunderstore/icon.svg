@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#3b2f4a"/>
+      <stop offset="1" stop-color="#15111c"/>
+    </radialGradient>
+    <linearGradient id="cover" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8e5bd6"/>
+      <stop offset="1" stop-color="#4f2c8a"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="36" fill="url(#bg)"/>
+  <!-- Shared-glow ring -->
+  <circle cx="128" cy="124" r="92" fill="none" stroke="#ffcf5a" stroke-width="6" stroke-dasharray="36 18" opacity="0.8"/>
+  <!-- Back tomes -->
+  <g transform="rotate(-16 76 130)">
+    <rect x="46" y="86" width="60" height="84" rx="6" fill="#2f6f9e"/>
+    <rect x="52" y="92" width="48" height="72" rx="3" fill="none" stroke="#9fd6ff" stroke-width="3"/>
+  </g>
+  <g transform="rotate(16 180 130)">
+    <rect x="150" y="86" width="60" height="84" rx="6" fill="#2f8a5a"/>
+    <rect x="156" y="92" width="48" height="72" rx="3" fill="none" stroke="#a6f0c4" stroke-width="3"/>
+  </g>
+  <!-- Front tome -->
+  <rect x="88" y="66" width="80" height="112" rx="8" fill="url(#cover)" stroke="#1b1024" stroke-width="4"/>
+  <rect x="96" y="74" width="64" height="96" rx="4" fill="none" stroke="#ffcf5a" stroke-width="4"/>
+  <path d="M128 96 l10 22 l-10 22 l-10 -22 z" fill="#ffcf5a"/>
+  <!-- Persistence anchor: a little lock/bookmark -->
+  <path d="M146 176 v30 l10 -8 l10 8 v-30 z" fill="#ffcf5a" stroke="#1b1024" stroke-width="3"/>
+</svg>
