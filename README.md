@@ -1,6 +1,6 @@
 # stonewards-persistent-multitome
 
-A Stonewards mod that recreates TheChiizu's MultiTome, where tomes picked up by any player are shared with everyone in the lobby. Unlike the original, it keeps track of every shared tome for each player, so someone who disconnects and reconnects gets all of them back. Each shared tome is granted and stored as if that player had picked it up themselves.
+A Stonewards mod, inspired by TheChiizu's MultiTome, where tomes picked up by any player are shared with everyone in the lobby. It keeps track of every shared tome for each player, so someone who disconnects and reconnects gets all of them back. Each shared tome is granted and stored as if that player had picked it up themselves.
 
 Player-facing docs are in [thunderstore/README.md](thunderstore/README.md).
 
@@ -8,7 +8,7 @@ Player-facing docs are in [thunderstore/README.md](thunderstore/README.md).
 
 Host only, BepInEx 5 + Harmony. See `src/PersistentMultiTome/TomeSharing.cs`.
 
-- **Share:** postfix on `NetworkHelper.UserCode_CmdApplyUpgrade`, the host's handler for a player's pick. For every other online player it does what the game does for their own pick: `ServerUpgradeAcquired`, append to `saveContainer.runPlayersData[steamID].rogueUpgrades`, and `TargetRestoreRogueUpgrade` so their upgrade list counts it. It doesn't hook `ServerUpgradeAcquired` (as MultiTome does) because the game also calls that when restoring a reconnecting player, which would share their tomes again.
+- **Share:** postfix on `NetworkHelper.UserCode_CmdApplyUpgrade`, the host's handler for a player's pick. For every other online player it does what the game does for their own pick: `ServerUpgradeAcquired`, append to `saveContainer.runPlayersData[steamID].rogueUpgrades`, and `TargetRestoreRogueUpgrade` so their upgrade list counts it. It doesn't hook `ServerUpgradeAcquired` because the game also calls that when restoring a reconnecting player, and this mod replays shared tomes through the run record instead.
 - **Rejoin:** nothing extra. The game's `ServerRestoreRogueUpgrades` replays the run record on spawn. Players in the record but offline at share time get the entry appended directly.
 - **First join mid-run:** a prefix on `FirstPersonController.ServerInit` notes players with no run record yet; after `OnServerAddPlayer` they get every entry in the shared ledger.
 - **Ledger:** cleared with `ClearAllRunData`, written to `BepInEx/config/PersistentMultiTome.shared.txt` whenever the game saves, and loaded only if it matches the save's `lastSaveTimeUtc`.

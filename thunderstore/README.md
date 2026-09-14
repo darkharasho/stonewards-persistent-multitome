@@ -1,6 +1,6 @@
 # PersistentMultiTome
 
-When any dwarf picks up a tome, the whole team gets it. Unlike MultiTome, shared tomes stick: disconnect and rejoin and you get every one of them back.
+When any dwarf picks up a tome, the whole team gets it. Shared tomes are saved to each player's run, so if you disconnect and rejoin you get every one of them back.
 
 ## How it works
 
@@ -14,7 +14,7 @@ When any dwarf picks up a tome, the whole team gets it. Unlike MultiTome, shared
 
 Only the host needs the mod. Other players can have it installed or not; it does nothing unless you are hosting.
 
-Don't install it alongside TheChiizu's MultiTome. Both would share each tome, so everyone would get it twice. If MultiTome is installed, BepInEx won't load this mod.
+Use either this mod or TheChiizu's MultiTome, not both. They do the same job, so together everyone would get each tome twice. If MultiTome is installed, BepInEx won't load this mod.
 
 ## Configuration
 
@@ -28,7 +28,7 @@ Edit in r2modman under **Config editor** → `com.darkharasho.stonewards.persist
 
 ## Credits
 
-Inspired by [MultiTome](https://thunderstore.io/c/stonewards/p/TheChiizu/MultiTome/) by TheChiizu. Written from scratch; no code is shared.
+Inspired by and thanks to [MultiTome](https://thunderstore.io/c/stonewards/p/TheChiizu/MultiTome/) by TheChiizu, which came up with the idea. This mod is written separately and shares no code.
 
 ## Issues
 
